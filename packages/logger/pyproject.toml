@@ -1,0 +1,14 @@
+[project]
+name = "logger"
+version = "0.1.0"
+description = "共通ロガー"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/logger", "src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

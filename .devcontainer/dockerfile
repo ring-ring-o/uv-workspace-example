@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/devcontainers/base:bookworm
+
+USER vscode
+
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+
+WORKDIR /workspace

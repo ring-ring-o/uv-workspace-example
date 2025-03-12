@@ -1,0 +1,11 @@
+services:
+  workspace:
+    build:
+      context: .
+      dockerfile: ./.devcontainer/dockerfile
+    volumes:
+      - type: bind
+        source: ./
+        target: /workspace
+    working_dir: /workspace
+    command: /bin/sh -c "while sleep 1000; do :; done"

@@ -1,0 +1,10 @@
+[project]
+name = "workspace-examplee"
+version = "0.1.0"
+description = "ワークスペースを使ったモノレポ構成のサンプル"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["applications/*", "packages/*"]

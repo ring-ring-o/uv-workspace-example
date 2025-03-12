@@ -1,0 +1,49 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+	"name": "uv-workspace-example",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": "../compose.devcontainer.yml",
+	"service": "workspace",
+	"workspaceFolder": "/workspace",
+	"shutdownAction": "stopCompose",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"charliermarsh.ruff",
+				"njpwerner.autodocstring",
+				"mosapride.zenkaku",
+				"RapidAPI.vscode-rapidapi-client",
+				"tamasfe.even-better-toml",
+				"mhutchie.git-graph",
+				"oderwat.indent-rainbow",
+				"KevinRose.vsc-python-indent",
+				"exiasr.hadolint"
+			],
+			"settings": {
+				"pythondefaultInterpreterPath": "/usr/bin/python3",
+				"[python]": {
+					"editor.defaultFormatter": "charliermarsh.ruff",
+					"editor.codeActionsOnSave": {
+						"source.fixAll.ruff": "explicit",
+						"source.organizeImports.ruff": "explicit"
+					},
+					"editor.formatOnSave": true
+				},
+				"files.insertFinalNewline": true,
+				"files.trimTrailingWhitespace": true,
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"editor.tabSize": 4
+			}
+		}
+	}
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

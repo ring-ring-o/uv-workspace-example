@@ -1,0 +1,16 @@
+[project]
+name = "defines"
+version = "0.1.0"
+description = "定義情報を"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pydantic>=2.10.6",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/defines", "src"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
